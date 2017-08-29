@@ -20,10 +20,14 @@ func calc(toValue int) int {
 }
 
 func main() {
+
+	pArraySize := flag.Int("size", 100, "size of array")
+	pIters := flag.Int("iter", 1000, "interations count")
+
 	flag.Parse()
 
-	arraySize := *flag.Int("size", 100, "size of array")
-	iters := *flag.Int("iter", 1000, "interations count")
+	arraySize := *pArraySize
+	iters := *pIters
 
 	rand.Seed(time.Now().UnixNano())
 
